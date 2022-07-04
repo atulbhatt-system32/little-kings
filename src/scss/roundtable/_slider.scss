@@ -1,0 +1,215 @@
+@import "../media";
+
+.roundtableSliderSection {
+  padding: 60px 105px 20px;
+
+  @include Small-Laptop {
+    padding: 60px 32px 20px 0;
+  }
+
+  @include for-phone-only {
+    .roundtableSliderSection {
+      padding: 60px 0 20px 0;
+    }
+  }
+
+  & .roundSlider {
+    // margin-left: -120px;
+    // width: (calc(100% + 240px));
+    position: relative;
+
+    & .roundImg {
+      & img {
+        width: 500px;
+        height: 500px;
+        object-fit: contain;
+        object-position: left;
+      }
+    }
+
+    & .ring {
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      .carousel {
+        position: relative;
+        width: 364px;
+        height: 364px;
+        border: 2px solid;
+        border-radius: 100%;
+        margin-left: -138px;
+        transition: 0.5s;
+        // transform: rotate(15deg);
+      }
+
+      .carousel::before {
+        /* content: ""; */
+        position: absolute;
+        width: 50%;
+        height: 100%;
+        background: #000;
+        border-radius: 50% 0 0 50%;
+      }
+
+      // с = 2 Pr
+      .item-carousel {
+        position: absolute;
+        border-radius: 50%;
+        background: #fff;
+        width: 100px;
+        height: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 14px;
+        margin: 2px;
+        bottom: 0;
+        transition: 0.5s;
+        opacity: 0;
+        background: linear-gradient(
+          180deg,
+          rgba(242, 191, 142, 0.63) 0%,
+          rgba(242, 191, 142, 0) 100%
+        );
+
+        & img {
+          width: 80px;
+          height: 80px;
+          object-fit: contain;
+          object-position: center center;
+        }
+
+        &.next {
+          opacity: 0.5;
+        }
+
+        &.prevNext {
+          opacity: 0.3;
+        }
+
+        &.lastNext {
+          opacity: 0.3;
+        }
+
+        &.prev {
+          opacity: 0.5;
+        }
+
+        &.active {
+          opacity: 1;
+        }
+
+        &:nth-child(1) {
+          right: -19px;
+          top: 101px;
+        }
+        &:nth-child(2) {
+          right: -17px;
+          top: 213px;
+        }
+        &:nth-child(3) {
+          right: 49px;
+          top: 303px;
+        }
+        &:nth-child(4) {
+          right: 156px;
+          top: 337px;
+        }
+        &:nth-child(5) {
+          right: 263px;
+          top: 302px;
+        }
+        &:nth-child(6) {
+          right: 330px;
+          top: 210px;
+        }
+        &:nth-child(7) {
+          right: 330px;
+          top: 100px;
+        }
+        &:nth-child(8) {
+          right: 263px;
+          top: 7px;
+        }
+        &:nth-child(9) {
+          right: 156px;
+          top: -27px;
+        }
+        &:nth-child(10) {
+          right: 48px;
+          top: 6px;
+        }
+      }
+    }
+  }
+}
+
+.roundtableSliderSection {
+  padding: 0;
+  .container-fluid {
+    padding-left: 0;
+    padding-right: 0;
+    .row {
+      .col-md-6 {
+        padding-right: 0;
+        padding-left: 0;
+        .roundSlider {
+          .roundImg {
+            img {
+              width: 316px;
+              height: 316px;
+            }
+          }
+          .ring {
+            .test {
+            }
+            .carousel {
+              // border: none;
+            }
+          }
+        }
+
+        .contant {
+          display: flex;
+          justify-content: space-between;
+          padding: 60px 32px;
+          .text {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 5px;
+            color: #fff;
+            img {
+              max-width: 30%;
+              max-height: 30%;
+            }
+            p {
+              font-size: 20px;
+              line-height: 21.5px;
+              color: #f2bf8e;
+              font-family: "Gotham ";
+            }
+            h5 {
+              font-size: 28px;
+              line-height: 28px;
+            }
+          }
+          button {
+            background-color: transparent;
+            border: none;
+            padding: 0;
+            img {
+              transform: rotate(-90deg);
+              width: 50%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.roundtableFaqSection {
+  margin: 0;
+}
