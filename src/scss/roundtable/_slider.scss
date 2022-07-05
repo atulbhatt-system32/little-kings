@@ -217,7 +217,7 @@
 @media (min-width: 1028px) {
   .roundtableSliderSection {
     padding: 0;
-    padding-top: 160px;
+    padding-top: 100px;
     .container-fluid {
       padding-left: 0;
       padding-right: 0;
@@ -240,7 +240,7 @@
               .test {
               }
               .carousel {
-                // border: none;
+                border: none;
                 width: 300px;
                 height: 300px;
                 border-color: #fff;
@@ -328,7 +328,7 @@
           .contant {
             display: flex;
             flex-direction: column;
-            padding: 60px 32px;
+            padding: 0 32px 60px 32px;
             gap: 30px;
             .text {
               display: flex;
@@ -338,19 +338,19 @@
               gap: 5px;
               color: #fff;
               img {
-                max-width: 30%;
-                max-height: 30%;
-                padding-bottom: 15px;
+                max-width: 12%;
+                max-height: 12%;
+                padding-bottom: 30px;
               }
               p {
-                font-size: 34px;
-                line-height: 37px;
+                font-size: 30px;
+                line-height: 33px;
                 color: #f2bf8e;
                 font-family: "Gotham ";
               }
               h5 {
-                font-size: 50px;
-                line-height: 50px;
+                font-size: 48px;
+                line-height: 48px;
               }
             }
             button {
