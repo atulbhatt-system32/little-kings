@@ -19,16 +19,64 @@ export class Slider extends Component {
     lastItem: 9,
     nextItem: 1,
     carousel: [
-      { image: sliderImg_1, id: 0, position: 1, name: "Dontworryaboutit.eth" },
-      { image: sliderImg_3, id: 1, position: 2, name: "Dontworryaboutit" },
-      { image: sliderImg_5, id: 2, position: 3, name: "Dontworryab" },
-      { image: sliderImg_1, id: 3, position: 4, name: "Dontworr" },
-      { image: sliderImg_4, id: 4, position: 5, name: "aboutit.eth" },
-      { image: sliderImg_2, id: 5, position: 6, name: "Dontworry" },
-      { image: sliderImg_5, id: 6, position: 7, name: "Dontw" },
-      { image: sliderImg_1, id: 7, position: 8, name: "utit.eth" },
-      { image: sliderImg_2, id: 8, position: 9, name: "Dont" },
-      { image: sliderImg_3, id: 9, position: 10, name: "Dontworr" },
+      {
+        image: sliderImg_1,
+        id: 0,
+        position: 1,
+        name: "Dontworryaboutit.eth",
+        role: "Artist/Founder",
+      },
+      {
+        image: sliderImg_3,
+        id: 1,
+        position: 2,
+        name: "Bepo.eth",
+        role: "Advisor",
+      },
+      {
+        image: sliderImg_5,
+        id: 2,
+        position: 3,
+        name: "Graystarz",
+        role: "Advisor/Marketing",
+      },
+      {
+        image: sliderImg_1,
+        id: 3,
+        position: 4,
+        name: "Tlop",
+        role: "Marketing",
+      },
+      {
+        image: sliderImg_4,
+        id: 4,
+        position: 5,
+        name: "Manny",
+        role: "Community Manager",
+      },
+      {
+        image: sliderImg_2,
+        id: 5,
+        position: 6,
+        name: "Bankai Sauce",
+        role: "Head Mod",
+      },
+      {
+        image: sliderImg_5,
+        id: 6,
+        position: 7,
+        name: "TheGrinch.eth",
+        role: "Mod",
+      },
+      {
+        image: sliderImg_1,
+        id: 7,
+        position: 8,
+        name: "ChBr",
+        role: "Developer",
+      },
+      // { image: sliderImg_2, id: 8, position: 9, name: "Dont", role: "" },
+      // { image: sliderImg_3, id: 9, position: 10, name: "Dontworr", role: "" },
     ],
   };
 
@@ -144,7 +192,7 @@ export class Slider extends Component {
                 {/* <p>heloo {this.state.carousel[this.state.centerItem].name}</p> */}
                 <div className="text">
                   <img src={icon} alt="img" />
-                  <p>Artist/Founder</p>
+                  <p>{this.state.carousel[this.state.centerItem].role}</p>
                   <h5>{this.state.carousel[this.state.centerItem].name}</h5>
                 </div>
                 {/* <p>heloo {this.state.carousel[this.state.centerItem].name}</p> */}
