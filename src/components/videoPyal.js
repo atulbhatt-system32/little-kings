@@ -66,11 +66,11 @@ const VideoPay = ({ handleVideo }) => {
       {newVideo && !isVideoOver ? (
         counter1 < 3 ? (
           <h4 className="tagline text-focus-in">To be a king is to feel</h4>
-        ) : counter1 >= 3 && counter1 < 6 ? (
+        ) : counter1 >= 3 && counter1 <= 5 ? (
           <h4 className="tagline text-focus-in">
             Free, Accepted, and Powerfull
           </h4>
-        ) : counter1 > 7 ? (
+        ) : counter1 >= 6 ? (
           <VideoPlayer
             className="video"
             src={vid2}
@@ -78,12 +78,7 @@ const VideoPay = ({ handleVideo }) => {
             volume={1}
             isMuted={false}
             loop={false}
-            onTimeUpdate={(ct, prog, dur) => {
-              // console.log("Time update", ct, prog, dur);
-              // setVid2Counter((prev) => prev + 1);
-            }}
             onEnd={() => {
-              console.log("end");
               setIsVideoOver(true);
               handleVideo(false);
             }}
@@ -95,12 +90,6 @@ const VideoPay = ({ handleVideo }) => {
             autoPlay={true}
             volume={1}
             isMuted={false}
-            onEnd={() => {
-              console.log("On end");
-            }}
-            onTimeUpdate={() => {
-              console.log("Time update");
-            }}
           />
         )
       ) : null}

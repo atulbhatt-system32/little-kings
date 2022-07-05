@@ -150,7 +150,41 @@
           &[aria-selected="true"] {
             &::before {
               transform: rotate(180deg);
+
               top: 32%;
+            }
+          }
+
+          @-webkit-keyframes scale-in-ver-top {
+            0% {
+              -webkit-transform: scaleY(0);
+              transform: scaleY(0);
+              -webkit-transform-origin: 100% 0%;
+              transform-origin: 100% 0%;
+              opacity: 1;
+            }
+            100% {
+              -webkit-transform: scaleY(1);
+              transform: scaleY(1);
+              -webkit-transform-origin: 100% 0%;
+              transform-origin: 100% 0%;
+              opacity: 1;
+            }
+          }
+          @keyframes scale-in-ver-top {
+            0% {
+              -webkit-transform: scaleY(0);
+              transform: scaleY(0);
+              -webkit-transform-origin: 100% 0%;
+              transform-origin: 100% 0%;
+              opacity: 1;
+            }
+            100% {
+              -webkit-transform: scaleY(1);
+              transform: scaleY(1);
+              -webkit-transform-origin: 100% 0%;
+              transform-origin: 100% 0%;
+              opacity: 1;
             }
           }
         }
@@ -159,7 +193,10 @@
         background-color: #f2bf8e;
         backdrop-filter: blur(50px);
         padding: 0 63px 50px;
-        animation: none;
+        -webkit-animation: scale-in-ver-top 0.5s
+          cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+        animation: scale-in-ver-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+          both;
 
         @include Mobile {
           padding: 0 16px 16px 16px;
