@@ -33,9 +33,6 @@ const VideoPay = ({ handleVideo }) => {
             autoPlay={true}
             volume={1}
             isMuted={false}
-            onEnd={() => {
-              console.log("end");
-            }}
           />
         ) : (
           counter > 2 &&

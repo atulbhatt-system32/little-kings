@@ -6,15 +6,13 @@ const Main = () => {
   const [inputValue, setInputValue] = useState(1);
 
   const addClickHandler = () => {
-    setInputValue((prevState) => {
-      return prevState + 1;
-    });
+    if (inputValue === 1) setInputValue(2);
   };
 
   const subClickHandler = () => {
-    setInputValue((prevState) => {
-      return prevState === 0 ? 0 : prevState - 1;
-    });
+    if (inputValue === 2) {
+      setInputValue(1);
+    }
   };
 
   return (
