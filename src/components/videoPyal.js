@@ -26,7 +26,7 @@ const VideoPay = ({ handleVideo }) => {
   return (
     <>
       {!newVideo ? (
-        counter < 2 ? (
+        counter <= 2 ? (
           <VideoPlayer
             className="video"
             src={vid0}
@@ -36,7 +36,7 @@ const VideoPay = ({ handleVideo }) => {
           />
         ) : (
           counter > 2 &&
-          counter < 5 && (
+          counter < 6 && (
             <VideoPlayer
               className="video"
               src={vid1}
@@ -57,7 +57,7 @@ const VideoPay = ({ handleVideo }) => {
             setCounter1(0);
             setNewVideo(true);
           }}
-          className="playBtn tracking-in-expand-fwd-top"
+          className="playBtn text-focus-in"
         >
           {" "}
           Play Next
@@ -65,11 +65,9 @@ const VideoPay = ({ handleVideo }) => {
       )}
       {newVideo && !isVideoOver ? (
         counter1 < 3 ? (
-          <h4 className="tagline tracking-in-expand-fwd-top">
-            To be a king is to feel
-          </h4>
-        ) : counter1 > 3 && counter1 < 6 ? (
-          <h4 className="tagline tracking-in-expand-fwd-top">
+          <h4 className="tagline text-focus-in">To be a king is to feel</h4>
+        ) : counter1 >= 3 && counter1 < 6 ? (
+          <h4 className="tagline text-focus-in">
             Free, Accepted, and Powerfull
           </h4>
         ) : counter1 > 7 ? (
