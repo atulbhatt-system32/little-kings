@@ -4,6 +4,12 @@ import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
 import sliderImg_1 from "../../image/mintImg_1.png";
 import sliderImg_2 from "../../image/mintImg_2.png";
+import sliderImg_3 from "../../image/mintImg_3.png";
+import sliderImg_4 from "../../image/mintImg_4.png";
+import sliderImg_5 from "../../image/mintImg_5.png";
+import sliderImg_6 from "../../image/mintImg_6.png";
+import sliderImg_7 from "../../image/mintImg_7.png";
+import sliderImg_8 from "../../image/mintImg_8.png";
 
 const sliderData = {
   nav: false,
@@ -76,7 +82,16 @@ const sliderData1 = {
   },
 };
 
-const imgData = [{ image: sliderImg_1 }, { image: sliderImg_2 }];
+const imgData = [
+  { image: sliderImg_1 },
+  { image: sliderImg_2 },
+  { image: sliderImg_3 },
+  { image: sliderImg_4 },
+  { image: sliderImg_5 },
+  { image: sliderImg_6 },
+  { image: sliderImg_7 },
+  { image: sliderImg_8 },
+];
 
 const MinSlider = () => {
   return (
@@ -92,7 +107,11 @@ const MinSlider = () => {
               ))}
             </OwlCarousel>
 
-            <OwlCarousel OwlCarousel className="owl-theme d-block d-sm-none mt-4" {...sliderData1}>
+            <OwlCarousel
+              OwlCarousel
+              className="owl-theme d-block d-sm-none mt-4"
+              {...sliderData1}
+            >
               {imgData.map((m) => (
                 <div className="item" key={m.image}>
                   <img src={m.image} />

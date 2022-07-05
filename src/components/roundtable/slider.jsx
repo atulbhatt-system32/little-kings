@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import circle from "../../image/circle.svg";
 import sliderImg_1 from "../../image/sliderImg_1.png";
 import sliderImg_2 from "../../image/sliderImg_2.png";
@@ -75,8 +75,20 @@ export class Slider extends Component {
         name: "ChBr",
         role: "Developer",
       },
-      // { image: sliderImg_2, id: 8, position: 9, name: "Dont", role: "" },
-      // { image: sliderImg_3, id: 9, position: 10, name: "Dontworr", role: "" },
+      {
+        image: sliderImg_2,
+        id: 8,
+        position: 9,
+        name: "Manny",
+        role: "Community Manager",
+      },
+      {
+        image: sliderImg_3,
+        id: 9,
+        position: 10,
+        name: "Bepo.eth",
+        role: "Advisor",
+      },
     ],
   };
 
