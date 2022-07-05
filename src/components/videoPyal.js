@@ -9,6 +9,7 @@ const VideoPay = ({ handleVideo }) => {
   const [counter1, setCounter1] = React.useState(NaN);
 
   const [newVideo, setNewVideo] = React.useState(false);
+  const [isVideoOver, setIsVideoOver] = React.useState(false);
 
   useEffect(() => {
     counter < 20 && setTimeout(() => setCounter(counter + 1), 1000);
@@ -19,54 +20,93 @@ const VideoPay = ({ handleVideo }) => {
   useEffect(() => {
     if (!isNaN(counter1)) {
       counter1 < 20 && setTimeout(() => setCounter1(counter1 + 1), 1000);
-      if (counter1 === 18) {
-        handleVideo(false);
-      }
     }
   }, [counter1]);
-  // const handleEnd = () => {
-  //   console.log("End Call");
-  // };
-  // console.log(counter, "====", counter1);
 
   return (
     <>
       {!newVideo ? (
-        counter < 5 ? (
-          <VideoPlayer className="video" src={vid0} autoPlay={true} />
-        ) : counter > 4 && counter < 10 ? (
-          <VideoPlayer className="video" src={vid1} autoPlay={true} />
+        counter < 2 ? (
+          <VideoPlayer
+            className="video"
+            src={vid0}
+            autoPlay={true}
+            volume={1}
+            isMuted={false}
+            onEnd={() => {
+              console.log("end");
+            }}
+          />
         ) : (
-          <>
-            <button
-              onClick={() => {
-                setCounter1(0);
-                setNewVideo(true);
+          counter > 2 &&
+          counter < 5 && (
+            <VideoPlayer
+              className="video"
+              src={vid1}
+              autoPlay={true}
+              volume={1}
+              isMuted={false}
+              onEnd={() => {
+                console.log("end");
               }}
-              className="playBtn tracking-in-expand-fwd-top"
-            >
-              {" "}
-              Play Next
-            </button>
-
-            {/* <h4 className="tagline tracking-in-expand-fwd-top">To be a king is to feel</h4> */}
-            {/* <h4 className="tagline tracking-in-expand-fwd-top">Free, Accepted, and Powerfull</h4> */}
-          </>
+            />
+          )
         )
       ) : null}
-      {newVideo ? (
-        counter1 < 4 ? (
+
+      {!newVideo && counter > 5 && (
+        <button
+          onClick={() => {
+            setCounter1(0);
+            setNewVideo(true);
+          }}
+          className="playBtn tracking-in-expand-fwd-top"
+        >
+          {" "}
+          Play Next
+        </button>
+      )}
+      {newVideo && !isVideoOver ? (
+        counter1 < 3 ? (
           <h4 className="tagline tracking-in-expand-fwd-top">
             To be a king is to feel
           </h4>
-        ) : counter1 > 3 && counter1 < 8 ? (
+        ) : counter1 > 3 && counter1 < 6 ? (
           <h4 className="tagline tracking-in-expand-fwd-top">
             Free, Accepted, and Powerfull
           </h4>
-        ) : counter1 > 7 && counter1 < 15 ? (
-          <VideoPlayer className="video" src={vid2} autoPlay={true} />
+        ) : counter1 > 7 ? (
+          <VideoPlayer
+            className="video"
+            src={vid2}
+            autoPlay={true}
+            volume={1}
+            isMuted={false}
+            loop={false}
+            onTimeUpdate={(ct, prog, dur) => {
+              // console.log("Time update", ct, prog, dur);
+              // setVid2Counter((prev) => prev + 1);
+            }}
+            onEnd={() => {
+              console.log("end");
+              setIsVideoOver(true);
+              handleVideo(false);
+            }}
+          />
         ) : (
-          <VideoPlayer className="video" src={vid0} autoPlay={true} />
+          <VideoPlayer
+            className="video"
+            src={vid0}
+            autoPlay={true}
+            volume={1}
+            isMuted={false}
+            onEnd={() => {
+              console.log("On end");
+            }}
+            onTimeUpdate={() => {
+              console.log("Time update");
+            }}
+          />
         )
       ) : null}
     </>
