@@ -213,3 +213,158 @@
 .roundtableFaqSection {
   margin: 0;
 }
+
+@media (min-width: 1536px) {
+  .roundtableSliderSection {
+    padding: 0;
+    padding-top: 160px;
+    .container-fluid {
+      padding-left: 0;
+      padding-right: 0;
+      .row {
+        gap: 100px;
+        .col-md-6 {
+          padding-right: 0;
+          padding-left: 0;
+          // margin-left: 200px;
+          .roundSlider {
+            .roundImg {
+              img {
+                width: 590px;
+                height: 590px;
+              }
+            }
+            .ring {
+              top: 72px;
+              left: 64px;
+              .test {
+              }
+              .carousel {
+                border: none;
+                width: 450px;
+                height: 450px;
+                border-color: #fff;
+                .item-carousel {
+                  opacity: 1;
+                  img {
+                  }
+                }
+                .active {
+                  width: 180px;
+                  height: 180px;
+                  img {
+                    width: 180px;
+                    height: 180px;
+                  }
+                }
+                .next {
+                  width: 140px;
+                  height: 140px;
+                  img {
+                    width: 140px;
+                    height: 140px;
+                  }
+                }
+                .prev {
+                  width: 140px;
+                  height: 140px;
+                  img {
+                    width: 140px;
+                    height: 140px;
+                  }
+                }
+                .undefined {
+                  width: 100px;
+                  height: 100px;
+                  img {
+                    width: 100px;
+                    height: 100px;
+                  }
+                }
+                .item-carousel:nth-child(1) {
+                  right: -169px;
+                  top: 22px;
+                }
+                .item-carousel:nth-child(2) {
+                  right: -170px;
+                  top: 219px;
+                }
+                .item-carousel:nth-child(3) {
+                  right: -60px;
+                  top: 385px;
+                }
+                .item-carousel:nth-child(4) {
+                  right: 128px;
+                  top: 446px;
+                }
+                .item-carousel:nth-child(5) {
+                  right: 313px;
+                  top: 389px;
+                }
+                .item-carousel:nth-child(6) {
+                  right: 431px;
+                  top: 235px;
+                }
+                .item-carousel:nth-child(7) {
+                  right: 436px;
+                  top: 37px;
+                }
+                .item-carousel:nth-child(8) {
+                  right: 323px;
+                  top: -118px;
+                }
+                .item-carousel:nth-child(9) {
+                  right: 134px;
+                  top: -186px;
+                }
+                .item-carousel:nth-child(10) {
+                  right: -50px;
+                  top: -128px;
+                }
+              }
+            }
+          }
+
+          .contant {
+            display: flex;
+            flex-direction: column;
+            padding: 60px 32px;
+            gap: 30px;
+            .text {
+              display: flex;
+              flex-direction: column;
+              justify-content: space-between;
+              align-items: center;
+              gap: 5px;
+              color: #fff;
+              img {
+                max-width: 30%;
+                max-height: 30%;
+                padding-bottom: 15px;
+              }
+              p {
+                font-size: 40px;
+                line-height: 43px;
+                color: #f2bf8e;
+                font-family: "Gotham ";
+              }
+              h5 {
+                font-size: 55px;
+                line-height: 55px;
+              }
+            }
+            button {
+              background-color: transparent;
+              border: none;
+              padding: 0;
+              img {
+                transform: unset;
+                width: 5%;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
