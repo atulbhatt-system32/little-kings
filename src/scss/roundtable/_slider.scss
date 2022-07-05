@@ -214,6 +214,160 @@
   margin: 0;
 }
 
+@media (min-width: 1028px) {
+  .roundtableSliderSection {
+    padding: 0;
+    padding-top: 160px;
+    .container-fluid {
+      padding-left: 0;
+      padding-right: 0;
+      .row {
+        gap: 100px;
+        .col-md-6 {
+          padding-right: 0;
+          padding-left: 0;
+          // margin-left: 200px;
+          .roundSlider {
+            .roundImg {
+              img {
+                width: 400px;
+                height: 400px;
+              }
+            }
+            .ring {
+              top: 46px;
+              left: 84px;
+              .test {
+              }
+              .carousel {
+                // border: none;
+                width: 300px;
+                height: 300px;
+                border-color: #fff;
+                .item-carousel {
+                  opacity: 1;
+                  img {
+                  }
+                }
+                .active {
+                  width: 120px;
+                  height: 120px;
+                  img {
+                    width: 120px;
+                    height: 120px;
+                  }
+                }
+                .next {
+                  width: 100px;
+                  height: 100px;
+                  img {
+                    width: 100px;
+                    height: 100px;
+                  }
+                }
+                .prev {
+                  width: 100px;
+                  height: 100px;
+                  img {
+                    width: 100px;
+                    height: 100px;
+                  }
+                }
+                .undefined {
+                  width: 80px;
+                  height: 80px;
+                  img {
+                    width: 80px;
+                    height: 80px;
+                  }
+                }
+                .item-carousel:nth-child(1) {
+                  right: -112px;
+                  top: 21px;
+                }
+                .item-carousel:nth-child(2) {
+                  right: -116px;
+                  top: 152px;
+                }
+                .item-carousel:nth-child(3) {
+                  right: -35px;
+                  top: 256px;
+                }
+                .item-carousel:nth-child(4) {
+                  right: 87px;
+                  top: 297px;
+                }
+                .item-carousel:nth-child(5) {
+                  right: 213px;
+                  top: 255px;
+                }
+                .item-carousel:nth-child(6) {
+                  right: 286px;
+                  top: 149px;
+                }
+                .item-carousel:nth-child(7) {
+                  right: 287px;
+                  top: 18px;
+                }
+                .item-carousel:nth-child(8) {
+                  right: 205px;
+                  top: -88px;
+                }
+                .item-carousel:nth-child(9) {
+                  right: 80px;
+                  top: -123px;
+                }
+                .item-carousel:nth-child(10) {
+                  right: -41px;
+                  top: -81px;
+                }
+              }
+            }
+          }
+
+          .contant {
+            display: flex;
+            flex-direction: column;
+            padding: 60px 32px;
+            gap: 30px;
+            .text {
+              display: flex;
+              flex-direction: column;
+              justify-content: space-between;
+              align-items: center;
+              gap: 5px;
+              color: #fff;
+              img {
+                max-width: 30%;
+                max-height: 30%;
+                padding-bottom: 15px;
+              }
+              p {
+                font-size: 34px;
+                line-height: 37px;
+                color: #f2bf8e;
+                font-family: "Gotham ";
+              }
+              h5 {
+                font-size: 50px;
+                line-height: 50px;
+              }
+            }
+            button {
+              background-color: transparent;
+              border: none;
+              padding: 0;
+              img {
+                transform: unset;
+                width: 5%;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
 @media (min-width: 1536px) {
   .roundtableSliderSection {
     padding: 0;
