@@ -11,6 +11,8 @@ const VideoPay = ({ handleVideo }) => {
   const [newVideo, setNewVideo] = React.useState(false);
   const [isVideoOver, setIsVideoOver] = React.useState(false);
 
+  const [isVideoOverCounter, setIsVideoOverCounter] = React.useState(0);
+
   useEffect(() => {
     counter < 20 && setTimeout(() => setCounter(counter + 1), 1000);
     if (counter === 10) {
@@ -22,6 +24,16 @@ const VideoPay = ({ handleVideo }) => {
       counter1 < 20 && setTimeout(() => setCounter1(counter1 + 1), 1000);
     }
   }, [counter1]);
+
+  useEffect(() => {
+    if (isVideoOver) {
+      if (isVideoOverCounter < 7) {
+        setTimeout(() => setIsVideoOverCounter(isVideoOverCounter + 1), 1000);
+      } else if (isVideoOverCounter === 7) {
+        handleVideo(false);
+      }
+    }
+  }, [isVideoOverCounter]);
 
   return (
     <>
@@ -63,14 +75,16 @@ const VideoPay = ({ handleVideo }) => {
           Play Next
         </button>
       )}
-      {newVideo && !isVideoOver ? (
-        counter1 < 3 ? (
+      {newVideo ? (
+        isVideoOver && isVideoOverCounter < 3 ? (
           <h4 className="tagline text-focus-in">To be a king is to feel</h4>
-        ) : counter1 >= 3 && counter1 <= 5 ? (
+        ) : isVideoOver &&
+          isVideoOverCounter >= 3 &&
+          isVideoOverCounter <= 5 ? (
           <h4 className="tagline text-focus-in">
             Free, Accepted, and Powerfull
           </h4>
-        ) : counter1 >= 6 ? (
+        ) : counter1 >= 3 && !isVideoOver ? (
           <VideoPlayer
             className="video"
             src={vid2}
@@ -80,7 +94,9 @@ const VideoPay = ({ handleVideo }) => {
             loop={false}
             onEnd={() => {
               setIsVideoOver(true);
-              handleVideo(false);
+              setTimeout(() => {
+                setIsVideoOverCounter(isVideoOverCounter + 1);
+              }, 1000);
             }}
           />
         ) : (
